@@ -1,0 +1,13 @@
+package com.xinhua.zql3_24;
+
+import javafx.scene.shape.Circle;
+
+public class Demo5 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		Circle c1 = new Circle();
+		c1.applyCss();
+	}
+
+}

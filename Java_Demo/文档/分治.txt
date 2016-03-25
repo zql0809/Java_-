@@ -1,0 +1,101 @@
+分治：
+（1）二分搜索
+对于一些规模比较大的问题  不能直接求出其结果的  就需要将其变化成比较小的问题一一解决。
+对于一个有序数列 进行2分查找 先得到mid = low + (high-low)/2的值  比较他与寻找值之间的联系
+若是相等 则return mid ，若是小于寻找值则进入递归 Find(a,mid+1,high,Findvalue);
+反之进入Find(a,low,mid-1,Findvalue);子循环按照上述循环继续执行。
+example：
+public static void main(String[] args){
+    int[] a = new a[10];
+    Scanner input = new Scanner(System.in);
+    for(int i =0 ; i<10;i++)
+    {
+        a[i] = input.nextInt();
+     }
+
+    int k = input.nextInt();
+    Find(a,0,a.length,k);
+
+}
+public static int Find(int[] a ,int low,int high,int key)
+{
+    if(low <= high)
+    {
+        int mid = low + (high-low)/2;
+        if(a[mid] == key)
+             return mid;
+        if(a[mid]>key)
+        { 
+             Find(a,low,mid-1,key);   
+         }else if（a[mid]<key）
+         {
+              Find(a,mid+1,high,key);
+          }
+     }else{
+         return -1;
+     }
+}
+（2）大整数乘法
+（3）Strassen矩阵乘法
+（4）棋盘覆盖
+（5）合并排序
+（6）快速排序
+快速排序：首先需要我们设置一个标志位temp，暂定第一位，接着再用两个标志low和high标记数组的最低和最高位，然后开始执行循环，从高位开始
+循环，将标志位的数据放在temp中，然后比较高位和temp的大小 若是temp大则将最高位的第一位放在第一位（我们定的标志位）上，high--，然后
+开始地位的循环  地位的数据和temp比较  若是temp大于他则继续 low++ 若是temp小于他则将该数据放在 a[high]里面然后又继续执行高位的数据和
+temp比较，这样一直比较下去，若是low = high时 就终止循环，现在再将a[low] = temp; 现在数组的构造就是 在temp数据左边的都比temp小，右
+边的都比他大。
+example:
+
+class Sort{
+public static void mian(String[] args){
+    int[] a = new a[10];
+    Scanner input = new Scanner(System.in);
+    for(int i =0 ; i<10;i++)
+    {
+        a[i] = input.nextInt();
+     }
+
+    Sort s = new Sort();
+    s.Quick(a,0,a.length());
+
+    for(int i =0 ; i<10;i++)
+    {
+        System.out.println(a[i]);
+     }
+     
+}
+
+public int getMiddle(int[] a,int low,int high){
+    int temp = a[low];
+    while( low <= high ){
+          while(low<high && a[high]>temp)
+          {
+                 high--;
+          }
+          a[low] = a[high];
+          while(low <high && a[low]<temp)
+          {
+                 low++;
+           }
+           a[high] = a[low];
+    }  
+     a[low] = temp;
+    return low;
+}
+
+public void Quick(int[] a,int low,int high){
+     if(low < high && a.length()>0 )
+     {
+            int mid = getMiddle(a,low,high);
+            getMiddle(a,low,mid-1)
+            getMiddle(a,mid+1,high)
+      }
+}
+ 
+}
+
+（7）线性时间选择
+（8）最接近点对问题
+（9）循环赛日程表
+（10）汉诺塔

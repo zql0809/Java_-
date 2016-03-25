@@ -1,0 +1,16 @@
+package com.xinhua.zql3_24;
+
+public class Demo5 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		 //同一个包的类可以直接使用！  不同包的引入就行了
+		Circle c1 = new Circle();
+		if(c1 instanceof Object){
+			System.out.println("对象");
+		}else if(c1 instanceof Circle){
+			System.out.println("我是一个圆");
+		}	
+	}
+
+}

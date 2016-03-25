@@ -1,0 +1,18 @@
+package com.xinhua.zql3_24;
+
+public class Demo3 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根//练习while
+		digui(3);
+	}
+	public static void digui(int n){
+		int s = n;
+		while(--n -1>0){
+			System.out.println(n);
+			 s = s*n;
+		}
+		System.out.println(s);
+	}
+
+}

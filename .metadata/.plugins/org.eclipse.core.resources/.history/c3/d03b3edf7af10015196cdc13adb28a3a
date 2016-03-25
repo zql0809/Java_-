@@ -1,0 +1,10 @@
+package com.xinhua.zql3_24;
+
+public class Demo4 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根//随机产生数组，利用插入排序
+	//排好顺序再利用二分查找查找其中一个数是否存在于数组中！
+	}
+
+}

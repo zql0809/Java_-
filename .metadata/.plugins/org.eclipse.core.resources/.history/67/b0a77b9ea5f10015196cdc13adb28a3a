@@ -1,0 +1,28 @@
+package com.xinhua.zql3_24;
+
+import java.util.Scanner;
+
+public class Demo5 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		 //同一个包的类可以直接使用！  不同包的引入就行了
+		printFlower();
+	}
+	
+	public static void printFlower(){
+		boolean b = true;
+		while(b){
+			System.out.println("请输入一个水仙花数");
+			Scanner input = new Scanner(System.in);
+			String f = input.nextLine();
+			int num = f.length();
+			System.out.println("水仙花数位数是:"+num);
+			
+			int a = Integer.parseInt(f);
+			System.out.println(a-5);
+			
+		}
+	}
+
+}

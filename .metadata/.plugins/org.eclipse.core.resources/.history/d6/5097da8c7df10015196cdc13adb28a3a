@@ -1,0 +1,47 @@
+package com.xinhua.zql3_24;
+
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
+public class Demo4 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根//随机产生数组，利用插入排序
+	//排好顺序再利用二分查找查找其中一个数是否存在于数组中！
+		int[] a = new int[11];
+		for(int i = 1;i<a.length;++i){
+			a[i] = (int)(Math.random()*100);
+			System.out.print("  "+a[i]);
+			a[0] = 0;
+		}
+		insertSort(a);
+		System.out.println();
+		for (int i = 0; i < a.length; i++) {
+			System.out.print("  "+a[i]);
+		}
+		
+	}
+	
+	public static void insertSort(int[] a){
+		int temp;
+		for (int i = 2; i < a.length; i++) {
+			 if(a[i]<a[i-1]){
+				 a[0] = a[i];
+				 a[i] = a[i-1];
+				 
+				 int pos = 0;
+				 for (int j = i-2; j > 0; --j) {
+					if(a[j]>a[0]){
+						a[j+1]=a[j];
+					}else{
+						pos = j+1;
+						break;
+					}
+				}
+				 a[pos] = a[0];
+				 a[0] = 0;
+			 }
+			
+		}
+	}
+
+}

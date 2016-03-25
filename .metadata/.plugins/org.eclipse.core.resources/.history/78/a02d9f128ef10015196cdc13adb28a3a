@@ -1,0 +1,5 @@
+package com.xinhua.zql3_24;
+
+public interface Shape {
+
+}

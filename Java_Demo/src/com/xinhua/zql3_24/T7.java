@@ -1,0 +1,80 @@
+package com.xinhua.zql3_24;
+
+import java.util.Scanner;
+
+public class T7 {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		chaWei();
+//		huiWen();
+		shuRu();
+		
+	}
+	
+	public static void show(int[][] a){
+		
+		
+	}
+	public static void shuRu(){
+		int n,m;
+		System.out.println("矩阵的行与列：");
+		Scanner input = new Scanner(System.in);
+		n = input.nextInt();
+		m = input.nextInt();
+		
+		int a[][] = new int[n][m];
+		
+		System.out.println("输入矩形的值：（n*m个）");
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				a[i][j]=input.nextInt();
+			}
+		}
+		
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a.length; j++) {
+				if(i == j){
+					System.out.print(a[i][j]);
+				    break;}else
+				    {System.out.print("    ");}
+			}
+			System.out.println();
+		}
+		
+	}
+	
+	public static void chaWei(){
+		System.out.println("给一个不多于5位数的数：");
+		Scanner input = new Scanner(System.in);
+		int a = input.nextInt();
+		
+		String b = a+ "";
+		System.out.println("该数是"+b.length()+"位数");
+		for (int i = 0; i < b.length(); i++) {
+			char k = b.charAt(i);
+			System.out.println("该数的第"+(b.length()-i)+"位数是："+k);
+		}
+	}
+	
+	public static void huiWen(){
+		System.out.println("请输入待测基位数的数：");
+		Scanner input = new Scanner(System.in);
+		int a = input.nextInt();
+		String b = a+"";
+		int k = b.length()/2;
+		
+		boolean c = true;
+		for (int i = 0; i < b.length()/2; i++) {
+			if(b.charAt(i)==b.charAt(i+k*2)){c = true;}else{c = false;break;}
+			k--;
+		}
+		
+		if(c == true)
+			System.out.println("回文数");
+		else
+			System.out.println("不是回文数");
+	}
+
+}
